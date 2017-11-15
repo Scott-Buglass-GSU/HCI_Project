@@ -15,3 +15,7 @@ c:\users\smbug_000\source\repos\HCI_Project\HCI_Project\obj\Debug\HCI_Project.ex
 c:\users\smbug_000\source\repos\HCI_Project\HCI_Project\obj\Debug\HCI_Project.pdb
 c:\users\smbug_000\source\repos\HCI_Project\HCI_Project\obj\Debug\PreferencesPage.g.cs
 c:\users\smbug_000\source\repos\HCI_Project\HCI_Project\obj\Debug\PreferencesPage.baml
+C:\Users\smbug_000\source\repos\HCI_Project\HCI_Project\obj\Debug\AddTrackerPage.g.cs
+C:\Users\smbug_000\source\repos\HCI_Project\HCI_Project\obj\Debug\AddTrackerPage.baml
+C:\Users\smbug_000\source\repos\HCI_Project\HCI_Project\obj\Debug\WaterUpdate.g.cs
+C:\Users\smbug_000\source\repos\HCI_Project\HCI_Project\obj\Debug\WaterUpdate.baml

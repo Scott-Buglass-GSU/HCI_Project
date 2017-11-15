@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-c:\users\smbug_000\source\repos\HCI_Project\HCI_Project\obj\Debug\
+C:\Users\smbug_000\source\repos\HCI_Project\HCI_Project\obj\Debug\
 HCI_Project
 none
 false
 DEBUG;TRACE
-c:\users\smbug_000\source\repos\HCI_Project\HCI_Project\App.xaml
-2-2101197420
+C:\Users\smbug_000\source\repos\HCI_Project\HCI_Project\App.xaml
+4-478909169
 
-61834163724
+8920529836
 14434534373
-MainWindow.xaml;PreferencesPage.xaml;
+AddTrackerPage.xaml;MainWindow.xaml;PreferencesPage.xaml;WaterUpdate.xaml;
 
 False
 

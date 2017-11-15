@@ -53,7 +53,8 @@
                 <ScrollViewer Grid.Row="1" Grid.ColumnSpan="2">
                     <Grid>
                         <Grid.RowDefinitions>
-                            <RowDefinition Height="591"/>
+                            <!--<RowDefinition Height="591"/>-->
+                            <RowDefinition Height="0"/>
                             <RowDefinition Height="591"/>
                         </Grid.RowDefinitions>
                         <Image x:Name="imgBuddy">
@@ -80,9 +81,18 @@
                                 <ColumnDefinition Width="*"/>
                                 <ColumnDefinition Width="15"/>
                             </Grid.ColumnDefinitions>
-                            <Button Grid.Row="1" Grid.Column="1" Content="Water"/>
-                            <Button Grid.Row="1" Grid.Column="3" Content="Bed"/>
-                            <Button Grid.Row="3" Grid.Column="1" Content="Plus Symbol"/>
+                            <Button x:Name="btnTracker0" Grid.Row="1" Grid.Column="1" Content="+" Click="btnTracker_Click" Tag="empty"/>
+                            <Button x:Name="btnTracker1" Grid.Row="1" Grid.Column="3" Content="+" Click="btnTracker_Click" Visibility="Hidden" Tag="empty"/>
+                            <Button x:Name="btnTracker2" Grid.Row="3" Grid.Column="1" Content="+" Click="btnTracker_Click" Visibility="Hidden" Tag="empty"/>
+                            <Button x:Name="btnTracker3" Grid.Row="3" Grid.Column="3" Content="+" Click="btnTracker_Click" Visibility="Hidden" Tag="empty"/>
+                            <Button x:Name="btnTracker4" Grid.Row="5" Grid.Column="1" Content="+" Click="btnTracker_Click" Visibility="Hidden" Tag="empty"/>
+                            <Button x:Name="btnTracker5" Grid.Row="5" Grid.Column="3" Content="+" Click="btnTracker_Click" Visibility="Hidden" Tag="empty"/>
+                            <Button x:Name="btnTracker6" Grid.Row="7" Grid.Column="1" Content="+" Click="btnTracker_Click" Visibility="Hidden" Tag="empty"/>
+                            <Button x:Name="btnTracker7" Grid.Row="7" Grid.Column="3" Content="+" Click="btnTracker_Click" Visibility="Hidden" Tag="empty"/>
+
+                            <Popup x:Name="popTrackerPop" Placement="Center" >
+                                <Frame x:Name="frmPopup" Width="250" Height="150" BorderBrush="Black" BorderThickness="4"/>
+                            </Popup>
                         </Grid>
                     </Grid>
 
@@ -90,7 +100,6 @@
 
                 </ScrollViewer>
             </Grid>
-
         </Frame.Content>
     </Frame>
 </Window>
