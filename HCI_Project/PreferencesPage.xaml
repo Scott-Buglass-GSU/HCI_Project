@@ -1,0 +1,29 @@
+﻿<Page x:Class="HCI_Project.PreferencesPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:HCI_Project"
+      mc:Ignorable="d" 
+      d:DesignHeight="689" d:DesignWidth="397"
+      Title="PreferencesPage"
+      ShowsNavigationUI="False">
+
+    <Grid Margin="16">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="64"/>
+            <RowDefinition Height="32"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        
+        <Button x:Name="btnBack" Content="Back Button" Click="btnBack_Button_Click" Height="48" Width="72" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+
+        <Label Content="Notifications:" Grid.Row="1" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <Button x:Name="btnNotifications" Grid.Row="1" Grid.Column="1" Content="ON" Click="btnNotifications_Click"/>
+        
+    </Grid>
+</Page>
