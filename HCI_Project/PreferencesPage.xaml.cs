@@ -20,20 +20,19 @@ namespace HCI_Project
     /// </summary>
     public partial class PreferencesPage : Page
     {
-        Frame main;
+        Frame main; //store a reference to the frame containing this page upon creation
+
         public PreferencesPage(Frame mainFrame)
         {
             main = mainFrame;
             InitializeComponent();
         }
 
-        private void btnBack_Button_Click(object sender, RoutedEventArgs e)
-        {
-            main.GoBack();
-        }
+        private void btnBack_Button_Click(object sender, RoutedEventArgs e) => main.GoBack();
 
         private void btnNotifications_Click(object sender, RoutedEventArgs e)
         {
+            //we aren't doing any actual notifications cause this isn't a real app. so this doesnt need to actually do anything more
             if(btnNotifications.Content.ToString() == "ON")
             {
                 btnNotifications.Content = "OFF";

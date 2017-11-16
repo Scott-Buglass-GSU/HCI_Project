@@ -21,17 +21,52 @@ namespace HCI_Project
     /// </summary>
     public partial class AddTrackerPage : Page
     {
-        Popup parent;
-        public AddTrackerPage(Popup pop)
+        Popup parent; //store a reference to the popup containing this window
+        MainWindow window; //store a reference to the main window
+
+        public AddTrackerPage(Popup pop, MainWindow w)
         {
             parent = pop;
+            window = w;
             InitializeComponent();
+            //initialize which options will appear in the combobox. Already tracked items will not be available
+            if (!window.waterTracked)
+            {
+                cmbTrackerSelect.Items.Add("Water");
+            }
+            if (!window.sleepTracked)
+            {
+                cmbTrackerSelect.Items.Add("Sleep");
+            }
         }
 
+        //handle when user presses the x button of the popup
         private void btnClose_Click(object sender, RoutedEventArgs e)
         {
+            //re-enables the main for use
+            window.mainFrame.IsEnabled = true;
             //closes out the popup holding this page
             parent.IsOpen = false;
+        }
+
+        //event to handle if any of the tracker buttons are pressed
+        private void btnAdd_Click(object sender, RoutedEventArgs e)
+        {
+            //check the selected combobox item, and set the main window boolean value to reflect user choice
+            if(cmbTrackerSelect.SelectedItem as string == "Water")
+            {
+                window.waterTracked = true;
+            }
+            else if(cmbTrackerSelect.SelectedItem as string == "Sleep")
+            {
+                window.sleepTracked = true;
+            }
+            //update main window tracker buttons to reflect changes
+            window.UpdateTrackerButtons();
+
+            //close out window
+            btnClose_Click(null, null);
+
         }
     }
 }

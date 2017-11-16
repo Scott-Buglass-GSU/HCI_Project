@@ -50,11 +50,11 @@
                 <Button x:Name="btnPreferences" Grid.Column="1" Content="Gear Icon" Height="50" Width="50" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="15,15,15,0" FontSize="10" Click="btnPreferences_Click"/>
 
                 <!--Scroll Area-->
-                <ScrollViewer Grid.Row="1" Grid.ColumnSpan="2">
+                <ScrollViewer x:Name="scrollViewer" Grid.Row="1" Grid.ColumnSpan="2">
                     <Grid>
                         <Grid.RowDefinitions>
                             <!--<RowDefinition Height="591"/>-->
-                            <RowDefinition Height="0"/>
+                            <RowDefinition Height="591"/>
                             <RowDefinition Height="591"/>
                         </Grid.RowDefinitions>
                         <Image x:Name="imgBuddy">
@@ -90,15 +90,13 @@
                             <Button x:Name="btnTracker6" Grid.Row="7" Grid.Column="1" Content="+" Click="btnTracker_Click" Visibility="Hidden" Tag="empty"/>
                             <Button x:Name="btnTracker7" Grid.Row="7" Grid.Column="3" Content="+" Click="btnTracker_Click" Visibility="Hidden" Tag="empty"/>
 
-                            <Popup x:Name="popTrackerPop" Placement="Center" >
-                                <Frame x:Name="frmPopup" Width="250" Height="150" BorderBrush="Black" BorderThickness="4"/>
-                            </Popup>
+                            
                         </Grid>
                     </Grid>
-
-
-
                 </ScrollViewer>
+                <Popup x:Name="popTrackerPop" Placement="Center" >
+                    <Frame x:Name="frmPopup" Width="250" Height="150" BorderBrush="Black" BorderThickness="4"/>
+                </Popup>
             </Grid>
         </Frame.Content>
     </Frame>
