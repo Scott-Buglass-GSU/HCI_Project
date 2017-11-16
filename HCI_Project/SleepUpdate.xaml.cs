@@ -34,7 +34,7 @@ namespace HCI_Project
         private void btnAdd_Click(object sender, RoutedEventArgs e)
         {
             //re-enables the main for use
-            window.mainFrame.IsEnabled = true;
+            window.frmMain.IsEnabled = true;
             //closes out the popup holding this page
             parent.IsOpen = false;
         }

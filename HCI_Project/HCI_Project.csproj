@@ -55,6 +55,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="HistogramPage.xaml.cs">
+      <DependentUpon>HistogramPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="SleepUpdate.xaml.cs">
       <DependentUpon>SleepUpdate.xaml</DependentUpon>
     </Compile>
@@ -62,6 +65,10 @@
       <DependentUpon>WaterUpdate.xaml</DependentUpon>
     </Compile>
     <Page Include="AddTrackerPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="HistogramPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

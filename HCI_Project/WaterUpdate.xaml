@@ -6,6 +6,7 @@
       xmlns:local="clr-namespace:HCI_Project"
       mc:Ignorable="d" 
       d:DesignHeight="150" d:DesignWidth="250"
+      MinHeight="150" MinWidth="250"
       Title="WaterUpdate">
 
     <Grid>

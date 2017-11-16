@@ -7,7 +7,7 @@
       mc:Ignorable="d" 
       d:DesignHeight="150" d:DesignWidth="250"
       Title="AddTrackerPage"
-      Background="White" Width="250" Height="150">
+      Background="White" MinWidth="250" MinHeight="150">
 
     <Grid>
         <Grid.RowDefinitions>

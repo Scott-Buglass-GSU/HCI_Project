@@ -12,30 +12,24 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using System.Windows.Controls.Primitives;
 
 namespace HCI_Project
 {
     /// <summary>
-    /// Interaction logic for WaterUpdate.xaml
+    /// Interaction logic for HistogramPage.xaml
     /// </summary>
-    public partial class WaterUpdate : Page
+    public partial class HistogramPage : Page
     {
-        MainWindow window;
-        Popup parent;
-        public WaterUpdate(MainWindow mw)
+        Frame parent;
+        public HistogramPage(Frame frm)
         {
-            window = mw;
-            parent = mw.popTrackerPop;
+            parent = frm;
             InitializeComponent();
         }
 
-        private void btnAdd_Click(object sender, RoutedEventArgs e)
+        private void btnBack_Click(object sender, RoutedEventArgs e)
         {
-            //re-enables the main for use
-            window.frmMain.IsEnabled = true;
-            //closes out the popup holding this page
-            parent.IsOpen = false;
+            parent.GoBack();
         }
     }
 }

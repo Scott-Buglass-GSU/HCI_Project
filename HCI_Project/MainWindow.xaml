@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:HCI_Project"
         mc:Ignorable="d"
         Title="Homeostasis" Height="720" Width="405">
-    <Frame x:Name="mainFrame" ContentRendered="mainFrame_ContentRendered">
+    <Frame x:Name="frmMain" ContentRendered="frmMain_ContentRendered">
         <Frame.Content>
             <Grid>
                 <Grid.RowDefinitions>
@@ -62,6 +62,16 @@
                                 <BitmapImage UriSource="/images/buddy.jpg"/>
                             </Image.Source>
                         </Image>
+                        <Button x:Name="btnHistory" Content="History" HorizontalAlignment="Center" VerticalAlignment="Center" Height="32" Width="128" RenderTransformOrigin="0.5,0.5" FontSize="18" Click="btnHistoryButton_Click">
+                            <Button.RenderTransform>
+                                <TransformGroup>
+                                    <ScaleTransform/>
+                                    <SkewTransform/>
+                                    <RotateTransform/>
+                                    <TranslateTransform Y="200"/>
+                                </TransformGroup>
+                            </Button.RenderTransform>
+                        </Button>
                         <Grid Grid.Row="1">
                             <Grid.RowDefinitions>
                                 <RowDefinition Height="15"/>

@@ -14,17 +14,48 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="64"/>
             <RowDefinition Height="32"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="2*"/>
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
-        
+
         <Button x:Name="btnBack" Content="Back Button" Click="btnBack_Button_Click" Height="48" Width="72" HorizontalAlignment="Left" VerticalAlignment="Top"/>
 
         <Label Content="Notifications:" Grid.Row="1" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center"/>
         <Button x:Name="btnNotifications" Grid.Row="1" Grid.Column="1" Content="ON" Click="btnNotifications_Click"/>
-        
+
+        <Separator Grid.Row="2" Grid.ColumnSpan="2" Margin="0,16,0,16"/>
+
+        <Label Content="Goals" Grid.Row="3" Grid.ColumnSpan="2" HorizontalContentAlignment="Center" FontSize="18"/>
+
+        <Grid Grid.Row="4" Grid.ColumnSpan="2" Grid.RowSpan="3">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <CheckBox x:Name="chkWater" Grid.Row="0" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            <Label Content="Water:" Grid.Row="0" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" />
+            <TextBox x:Name="txtWater" Grid.Row="0" Grid.Column="2"  Width="40"/>
+            <ComboBox x:Name="cmbUnit" Grid.Row="0" Grid.Column="3"/>
+            <Label Content="per day" Grid.Row="0" Grid.Column="4" HorizontalAlignment="Center" VerticalAlignment="Center" />
+
+            <CheckBox x:Name="chkSleep" Grid.Row="1" Grid.Column="0"  HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            <Label Content="Sleep:" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center"  />
+            <TextBox x:Name="txtSleep" Grid.Row="1" Grid.Column="2"   Width="40"/>
+            <Label Content="hours" Grid.Row="1" Grid.Column="3" HorizontalAlignment="Center" VerticalAlignment="Center"  />
+            <Label Content="per day" Grid.Row="1" Grid.Column="4" HorizontalAlignment="Center" VerticalAlignment="Center"  />
+        </Grid>
     </Grid>
 </Page>

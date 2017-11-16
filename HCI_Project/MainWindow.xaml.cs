@@ -46,15 +46,15 @@ namespace HCI_Project
         private void btnPreferences_Click(object sender, RoutedEventArgs e)
         {
             //creates a new preferences page
-            PreferencesPage preferences = new PreferencesPage(mainFrame);
+            PreferencesPage preferences = new PreferencesPage(frmMain);
             //opens that page in the main window frame
-            mainFrame.Navigate(preferences);
+            frmMain.Navigate(preferences);
         }
 
-        private void mainFrame_ContentRendered(object sender, EventArgs e)
+        private void frmMain_ContentRendered(object sender, EventArgs e)
         {
             //stops the ugle navigation bar from appearing when the navigate method is called
-            mainFrame.NavigationUIVisibility = System.Windows.Navigation.NavigationUIVisibility.Hidden;
+            frmMain.NavigationUIVisibility = System.Windows.Navigation.NavigationUIVisibility.Hidden;
         }
 
         private void btnTracker_Click(object sender, RoutedEventArgs e)
@@ -63,24 +63,32 @@ namespace HCI_Project
             Button button = sender as Button;
             Frame frm = popTrackerPop.Child as Frame;
 
+            Page page;
+
             //switch case to determine which popup opens
             switch (button.Tag.ToString())
             {
                 case "empty":
-                    frm.Navigate(new AddTrackerPage(this));
+                    page = new AddTrackerPage(this);
+                    frm.Width = page.Width; frm.Height = page.Width;
+                    frm.Navigate(page);
                     break;
                 case "Water":
-                    frm.Navigate(new WaterUpdate(this));
+                    page = new WaterUpdate(this);
+                    frm.Width = page.Width; frm.Height = page.Width;
+                    frm.Navigate(page);
                     break;
                 case "Sleep":
-                    frm.Navigate(new SleepUpdate(this));
+                    page = new SleepUpdate(this);
+                    frm.Width = page.Width; frm.Height = page.Width;
+                    frm.Navigate(page);
                     break;
                 default:
                     return;
 
             }
             //stops user from interacting with the rest of the app while the dialog is visible
-            mainFrame.IsEnabled = false;
+            frmMain.IsEnabled = false;
             
             //opens popup
             popTrackerPop.IsOpen = true;
@@ -132,6 +140,11 @@ namespace HCI_Project
                 button.Visibility = Visibility.Hidden;
             }
 
+        }
+
+        private void btnHistoryButton_Click(object sender, RoutedEventArgs e)
+        {
+            frmMain.Navigate(new HistogramPage(frmMain));
         }
     }
 }
