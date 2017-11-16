@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Windows.Controls.Primitives;
 
 namespace HCI_Project
 {
@@ -20,9 +21,22 @@ namespace HCI_Project
     /// </summary>
     public partial class SleepUpdate : Page
     {
-        public SleepUpdate()
+        Popup parent; //store a reference to the popup containing this window
+        MainWindow window; //store a reference to the main window
+
+        public SleepUpdate(MainWindow mw)
         {
+            window = mw;
+            parent = mw.popTrackerPop;
             InitializeComponent();
+        }
+
+        private void btnAdd_Click(object sender, RoutedEventArgs e)
+        {
+            //re-enables the main for use
+            window.mainFrame.IsEnabled = true;
+            //closes out the popup holding this page
+            parent.IsOpen = false;
         }
     }
 }

@@ -24,9 +24,9 @@ namespace HCI_Project
         Popup parent; //store a reference to the popup containing this window
         MainWindow window; //store a reference to the main window
 
-        public AddTrackerPage(Popup pop, MainWindow w)
+        public AddTrackerPage(MainWindow w)
         {
-            parent = pop;
+            parent = w.popTrackerPop;
             window = w;
             InitializeComponent();
             //initialize which options will appear in the combobox. Already tracked items will not be available

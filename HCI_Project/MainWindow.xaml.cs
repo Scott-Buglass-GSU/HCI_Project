@@ -67,13 +67,13 @@ namespace HCI_Project
             switch (button.Tag.ToString())
             {
                 case "empty":
-                    frm.Navigate(new AddTrackerPage(popTrackerPop, this));
+                    frm.Navigate(new AddTrackerPage(this));
                     break;
                 case "Water":
-                    frm.Navigate(new WaterUpdate());
+                    frm.Navigate(new WaterUpdate(this));
                     break;
                 case "Sleep":
-                    //frm.Navigate(new)
+                    frm.Navigate(new SleepUpdate(this));
                     break;
                 default:
                     return;

@@ -95,7 +95,7 @@
                     </Grid>
                 </ScrollViewer>
                 <Popup x:Name="popTrackerPop" Placement="Center" >
-                    <Frame x:Name="frmPopup" Width="250" Height="150" BorderBrush="Black" BorderThickness="4"/>
+                    <Frame x:Name="frmPopup" Width="250" Height="150" BorderBrush="Black" BorderThickness="1" Background="White"/>
                 </Popup>
             </Grid>
         </Frame.Content>
