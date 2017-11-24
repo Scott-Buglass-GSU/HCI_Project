@@ -9,7 +9,7 @@
       Title="AddTrackerPage"
       Background="White" MinWidth="250" MinHeight="150">
 
-    <Grid>
+    <Grid Background="#FF10152E">
         <Grid.RowDefinitions>
             <RowDefinition Height="*"/>
             <RowDefinition Height="*"/>
@@ -18,7 +18,7 @@
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="Auto"/>
         </Grid.ColumnDefinitions>
-        <ComboBox x:Name="cmbTrackerSelect" Grid.ColumnSpan="2" VerticalAlignment="Bottom" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Height="32"/>
+        <ComboBox x:Name="cmbTrackerSelect" Grid.ColumnSpan="2" VerticalAlignment="Bottom" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Height="32" Background="#FF504F4F" Foreground="#FF26316B" BorderBrush="#FF26316B"/>
         <Button x:Name="btnAdd" Content="press me" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Click="btnAdd_Click" HorizontalAlignment="Center" VerticalAlignment="Center" Height="32" Width="64" />
 
         <Button x:Name="btnClose" Content="x" Grid.Row="0" Grid.Column="1" VerticalAlignment="Top" HorizontalAlignment="Right" Width="32" Height="32" Click="btnClose_Click"/>

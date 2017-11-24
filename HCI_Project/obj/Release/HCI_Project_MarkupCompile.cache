@@ -4,11 +4,11 @@
 winexe
 C#
 .cs
-C:\Users\ADAM\Source\Repos\HCI_Project2\HCI_Project\obj\Debug\
+C:\Users\ADAM\Source\Repos\HCI_Project2\HCI_Project\obj\Release\
 HCI_Project
 none
 false
-DEBUG;TRACE
+TRACE
 C:\Users\ADAM\Source\Repos\HCI_Project2\HCI_Project\App.xaml
 61683791159
 
@@ -16,5 +16,5 @@ C:\Users\ADAM\Source\Repos\HCI_Project2\HCI_Project\App.xaml
 14434534373
 AddTrackerPage.xaml;HistogramPage.xaml;MainWindow.xaml;PreferencesPage.xaml;SleepUpdate.xaml;WaterUpdate.xaml;
 
-False
+True
 

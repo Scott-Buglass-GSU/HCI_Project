@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Windows.Controls.Primitives;
+using System.Windows.Resources;
 
 namespace HCI_Project
 {
@@ -107,8 +108,14 @@ namespace HCI_Project
             {
                 button = TrackerButtons[i];
                 i++;
-
-                button.Content = "Water";
+                //Set the correct image to button
+                Uri r = new Uri("images/water.png", UriKind.Relative);
+                StreamResourceInfo s = Application.GetResourceStream(r);
+                BitmapFrame b = BitmapFrame.Create(s.Stream);
+                var brush = new ImageBrush();
+                brush.ImageSource = b;
+                button.Background = brush;
+                button.Content = "";
                 button.Tag = "Water";
                 button.Visibility = Visibility.Visible;
             }
@@ -117,9 +124,15 @@ namespace HCI_Project
             {
                 button = TrackerButtons[i];
                 i++;
-
-                button.Content = "Sleep";
+                //Set the correct image to button
+                Uri r = new Uri("images/sleep.png", UriKind.Relative);
+                StreamResourceInfo s = Application.GetResourceStream(r);
+                BitmapFrame b = BitmapFrame.Create(s.Stream);
+                var brush = new ImageBrush();
+                brush.ImageSource = b;
+                button.Background = brush;
                 button.Tag = "Sleep";
+                button.Content = "";
                 button.Visibility = Visibility.Visible;
             }
             //other trackables would be added here
@@ -146,5 +159,7 @@ namespace HCI_Project
         {
             frmMain.Navigate(new HistogramPage(frmMain));
         }
+
+   
     }
 }
