@@ -24,9 +24,9 @@
             <ColumnDefinition Width="1*"/>
         </Grid.ColumnDefinitions>
 
-        <Button x:Name="btnUp" Grid.Row="0" Grid.Column="0" Grid.RowSpan="2" Content="^" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="#FFB3B3B3" FontFamily="Kokila" FontSize="72" FontWeight="Bold"/>
-        <TextBox x:Name="txtEntry" Text="0" Grid.Row="2" Grid.Column="0" Grid.RowSpan="2" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="24" Foreground="#FF10152E" />
-        <Button x:Name="btnDown" Grid.Row="4" Grid.Column="0" Grid.RowSpan="2" Content="^" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="#FFB3B3B3" FontFamily="Kokila" FontSize="72" FontWeight="Bold" RenderTransformOrigin="0.5,0.5">
+        <Button x:Name="btnUp" Click="btnUp_Click" Grid.Row="0" Grid.Column="0" Grid.RowSpan="2" Content="^" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="#FFB3B3B3" FontFamily="Kokila" FontSize="72" FontWeight="Bold"/>
+        <TextBox x:Name="txtEntry" Grid.Row="2" Grid.Column="0" Grid.RowSpan="2" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="24" Foreground="#FF10152E" />
+        <Button x:Name="btnDown" Click="btnDown_Click" Grid.Row="4" Grid.Column="0" Grid.RowSpan="2" Content="^" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="#FFB3B3B3" FontFamily="Kokila" FontSize="72" FontWeight="Bold" RenderTransformOrigin="0.5,0.5">
             <Button.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -37,10 +37,10 @@
             </Button.RenderTransform>
         </Button>
 
-        <Label x:Name="btnLiter" Content="Hours" Grid.Row="2" Grid.Column="1" Grid.RowSpan="2" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontFamily="Kokila" FontSize="24" Foreground="#FFB3B3B3"/>
+        <Label x:Name="lbHours" Content="Hours" Grid.Row="2" Grid.Column="1" Grid.RowSpan="2" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontFamily="Kokila" FontSize="24" Foreground="#FFB3B3B3"/>
 
         <Button x:Name="btnAdd" Content="Add" Grid.Column="2" Grid.RowSpan="3" Click="btnAdd_Click" Background="#FFB3B3B3" BorderBrush="Black" Foreground="#FF10152E" FontFamily="Kokila" FontSize="24"/>
-        <Button x:Name="btnRemove" Content="Remove" Grid.Row="3" Grid.Column="2" Grid.RowSpan="3" Background="#FFB3B3B3" BorderBrush="Black" Foreground="#FF10152E" FontFamily="Kokila" FontSize="20"/>
+        <Button x:Name="btnRemove" Click="btnRemove_Click" Content="Remove" Grid.Row="3" Grid.Column="2" Grid.RowSpan="3" Background="#FFB3B3B3" BorderBrush="Black" Foreground="#FF10152E" FontFamily="Kokila" FontSize="20"/>
 
     </Grid>
 </Page>

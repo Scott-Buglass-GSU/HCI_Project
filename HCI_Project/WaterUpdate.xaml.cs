@@ -23,19 +23,84 @@ namespace HCI_Project
     {
         MainWindow window;
         Popup parent;
+        int min = 0;
+        int max = 100;
+        int start = 0;
+        int value = 0;
+        string unit = "";
+
         public WaterUpdate(MainWindow mw)
         {
             window = mw;
             parent = mw.popTrackerPop;
             InitializeComponent();
+            txtEntry.Text = start.ToString();
         }
 
         private void btnAdd_Click(object sender, RoutedEventArgs e)
         {
-            //re-enables the main for use
-            window.frmMain.IsEnabled = true;
-            //closes out the popup holding this page
-            parent.IsOpen = false;
+            if (unit != "" && value != 0)
+            {
+                //re-enables the main for use
+                window.frmMain.IsEnabled = true;
+                //closes out the popup holding this page
+                parent.IsOpen = false;
+            }
+            else
+            {
+                unit = "";
+                value = 0;
+                txtEntry.Text = start.ToString();
+            }
+        }
+        private void btnRemove_Click(object sender, RoutedEventArgs e)
+        {
+            if (unit != "" && value != 0)
+            {
+                //re-enables the main for use
+                window.frmMain.IsEnabled = true;
+                //closes out the popup holding this page
+                parent.IsOpen = false;
+            }
+            else
+            {
+                unit = "";
+                value = 0;
+                txtEntry.Text = start.ToString();
+            }
+        }
+        private void btnUp_Click(object sender, RoutedEventArgs e)
+        {
+            int n;
+            if (txtEntry.Text != "")
+                n = Convert.ToInt32(txtEntry.Text);
+            else n = 0;
+            if (n < max)
+                txtEntry.Text = Convert.ToString(n + 1);
+            value = Convert.ToInt32(txtEntry.Text);
+        }
+        private void btnDown_Click(object sender, RoutedEventArgs e)
+        {
+            int n;
+            if (txtEntry.Text != "")
+                n = Convert.ToInt32(txtEntry.Text);
+            else n = 0;
+            if (n > min)
+                txtEntry.Text = Convert.ToString(n - 1);
+            value = Convert.ToInt32(txtEntry.Text);
+        }
+
+        private void btnLiter_Click(object sender, RoutedEventArgs e)
+        {
+            unit = "liter";
+        }
+        private void btnCup_Click(object sender, RoutedEventArgs e)
+        {
+            unit = "cup";
+        }
+        private void btnOz_Click(object sender, RoutedEventArgs e)
+        {
+            unit = "oz";
         }
     }
 }
