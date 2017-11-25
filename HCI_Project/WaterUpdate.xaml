@@ -38,7 +38,7 @@
         </Button>
 
         <Button x:Name="btnLiter" Click="btnLiter_Click" Content="liter" Grid.Row="0" Grid.Column="1" Grid.RowSpan="2" Background="#FFB3B3B3" BorderBrush="Black" Foreground="#FF10152E" FontFamily="Kokila" FontSize="24"/>
-        <Button x:Name="btnCup" Click="btnCup_Click" Content="cup" Grid.Row="2" Grid.Column="1" Grid.RowSpan="2" Background="#FFB3B3B3" BorderBrush="Black" Foreground="#FF10152E" FontFamily="Kokila" FontSize="24"/>
+        <Button x:Name="btnCup" Click="btnCup_Click" Content="cup" Grid.Row="2" Grid.Column="1" Grid.RowSpan="2" Background="#FFB3B3B3" BorderBrush="Black" Foreground="#FF10152E" FontFamily="Kokila" FontSize="24" IsEnabled="False"/>
         <Button x:Name="btnOz" Click="btnOz_Click" Content="oz"  Grid.Row="4" Grid.Column="1" Grid.RowSpan="2" Background="#FFB3B3B3" BorderBrush="Black" Foreground="#FF10152E" FontFamily="Kokila" FontSize="24"/>
 
         <Button x:Name="btnAdd" Content="Add" Grid.Column="2" Grid.RowSpan="3" Click="btnAdd_Click" Background="#FFB3B3B3" BorderBrush="Black" Foreground="#FF10152E" FontFamily="Kokila" FontSize="24"/>

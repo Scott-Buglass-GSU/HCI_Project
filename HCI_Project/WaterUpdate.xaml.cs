@@ -27,7 +27,7 @@ namespace HCI_Project
         int max = 100;
         int start = 0;
         int value = 0;
-        string unit = "";
+        string unit = "cup";
 
         public WaterUpdate(MainWindow mw)
         {
@@ -93,14 +93,23 @@ namespace HCI_Project
         private void btnLiter_Click(object sender, RoutedEventArgs e)
         {
             unit = "liter";
+            btnLiter.IsEnabled = false;
+            btnOz.IsEnabled = true;
+            btnCup.IsEnabled = true;
         }
         private void btnCup_Click(object sender, RoutedEventArgs e)
         {
             unit = "cup";
+            btnLiter.IsEnabled = true;
+            btnOz.IsEnabled = true;
+            btnCup.IsEnabled = false;
         }
         private void btnOz_Click(object sender, RoutedEventArgs e)
         {
             unit = "oz";
+            btnLiter.IsEnabled = true;
+            btnOz.IsEnabled = false;
+            btnCup.IsEnabled = true;
         }
     }
 }
